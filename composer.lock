@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36793882908b6cbdd344b5a4840231db",
+    "content-hash": "6b115e32b05d7cfca2bd8bec5ef3ca16",
     "packages": [
         {
             "name": "brick/math",
@@ -6588,6 +6588,53 @@
                 "source": "https://github.com/laravel/pint"
             },
             "time": "2026-04-20T15:26:14+00:00"
+        },
+        {
+            "name": "m-j-smith/laravel-ci-config",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/m-j-smith/laravel-ci-config.git",
+                "reference": "1105153fbc9f2fd0d20cbbe1a7fda75318529403"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/m-j-smith/laravel-ci-config/zipball/1105153fbc9f2fd0d20cbbe1a7fda75318529403",
+                "reference": "1105153fbc9f2fd0d20cbbe1a7fda75318529403",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^12.0|^13.0",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MJSmith\\LaravelCiConfig\\CiConfigServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MJSmith\\LaravelCiConfig\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Smith"
+                }
+            ],
+            "description": "A minimal GitHub Actions CI setup for Laravel projects.",
+            "support": {
+                "issues": "https://github.com/m-j-smith/laravel-ci-config/issues",
+                "source": "https://github.com/m-j-smith/laravel-ci-config/tree/v1.0.0"
+            },
+            "time": "2026-06-01T20:56:38+00:00"
         },
         {
             "name": "mockery/mockery",
