@@ -29,9 +29,6 @@
         <header>
             <x-nav />
         </header>
-<<<<<<< HEAD
-
-=======
 
         <main>
 
@@ -39,11 +36,8 @@
             
             
 
-            
-
             </div>
         </main>
 
->>>>>>> feat(users): added user registration, email verification, authentication
     </body>
 </html>

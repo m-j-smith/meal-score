@@ -6,11 +6,7 @@
 @theme {
     --font-display: 'Playfair Display', serif;
     --font-body:    'Inter', sans-serif;
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> feat(users): added user registration, email verification, authentication
     /* ── Parchment – warm off-white neutrals ── */
     --color-parchment:     oklch(0.67 0.06 75);
     --color-parchment-50:  oklch(0.98 0.01 75);
@@ -38,8 +34,6 @@
     --color-herb-800: oklch(0.30 0.06 145);
     --color-herb-900: oklch(0.22 0.04 145);
     --color-herb-950: oklch(0.16 0.03 145);
-<<<<<<< HEAD
-=======
 }
 
 
@@ -75,5 +69,4 @@
     input::placeholder {
         color: var(--color-parchment-400);
     }
->>>>>>> feat(users): added user registration, email verification, authentication
 }
