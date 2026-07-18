@@ -9,11 +9,6 @@
     x-cloak>
     
     <div class="space-y-2 px-2 pt-2 pb-3">
-        @guest
-            <x-nav.button variant="outline" href="#">Sign in</x-button>
-            <x-nav.button variant="primary" href="#">Get started</x-button>
-        @else
-            
-        @endguest
+        <x-nav.menu-items />
     </div>
 </div>

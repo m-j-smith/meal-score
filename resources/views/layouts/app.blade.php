@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'MealScore') }}</title>
 
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x/dist/cdn.min.js"></script>
         @fonts
@@ -22,22 +22,16 @@
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon/favicon-32x32.png') }}">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon/apple-touch-icon.png') }}">
         <link rel="manifest" href="{{ asset('img/favicon/site.webmanifest') }}">
-
     </head>
 
     <body class="antialiased bg-parchment-100" x-data="{ mobileOpen: false }">
+    
         <header>
             <x-nav />
         </header>
 
-        <main>
-
-            <div class="max-w-md mx-auto">
-            
-            
-
-            </div>
+        <main class="max-w-7xl mx-auto my-12">
+            @yield('content')
         </main>
-
     </body>
 </html>

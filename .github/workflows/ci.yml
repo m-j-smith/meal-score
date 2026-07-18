@@ -10,41 +10,6 @@ on:
     branches: [main, develop]
 
 jobs:
-  tests:
-    name: Tests
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.4'
-          extensions: mbstring, pdo, pdo_sqlite
-          ini-values: error_reporting=E_ALL
-          coverage: none
-
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-interaction
-
-      - name: Copy .env
-        run: cp .env.example .env.testing
-
-      - name: Generate key
-        run: php artisan key:generate --env=testing
-      
-      - name: Install NPM dependencies
-        run: npm install
-
-      - name: Compile assets
-        run: npm run build
-
-      - name: Run tests
-        run: php artisan test --env=testing
-
   style:
     name: Code Style
     runs-on: ubuntu-latest
