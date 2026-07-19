@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\DTOs\Auth\UserRegistrationDTO;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisteredUserRequest;
 use App\Services\Auth\UserService;
@@ -23,7 +24,9 @@ class RegisteredUserController extends Controller
      */
     public function store(RegisteredUserRequest $request, UserService $userService): RedirectResponse
     {
-        $user = $userService->create($request->validated());
+        $userDTO = UserRegistrationDTO::fromRequest($request);
+
+        $user = $userService->create($userDTO);
 
         auth()->login($user);
 
