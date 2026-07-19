@@ -30,7 +30,7 @@
             <x-nav />
         </header>
 
-        <main class="max-w-7xl mx-auto my-12">
+        <main class="max-w-7xl mx-auto my-12 px-2 sm:px-6">
             @yield('content')
         </main>
     </body>

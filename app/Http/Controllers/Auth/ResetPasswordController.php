@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\DTOs\Auth\ResetPasswordDTO;
 use App\Http\Controllers\Controller;
-use App\Services\Auth\PasswordResetService;
+use App\Http\Requests\Auth\ResetPasswordRequest;
+use App\Services\Auth\ResetPasswordService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 
-class NewPasswordController extends Controller
+class ResetPasswordController extends Controller
 {
     /**
      * Display the password reset view.
@@ -25,9 +27,11 @@ class NewPasswordController extends Controller
      *
      * @throws ValidationException
      */
-    public function store(Request $request, PasswordResetService $passwordResetService): RedirectResponse
+    public function store(ResetPasswordRequest $request, ResetPasswordService $resetPasswordService): RedirectResponse
     {
-        $status = $passwordResetService->create($request->only('email', 'password', 'password_confirmation', 'token'));
+        $resetPasswordDTO = ResetPasswordDTO::fromRequest($request);
+
+        $status = $resetPasswordService->create($resetPasswordDTO);
 
         // If the password was successfully reset, redirect the user back to the application's home authenticated view.
         // If there is an error, redirect them back to where they came from with their error message.
