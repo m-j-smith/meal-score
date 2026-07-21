@@ -16,6 +16,14 @@ class DiningTablePolicy
     }
 
     /**
+     * Determine whether the user can create the model.
+     */
+    public function create(): bool
+    {
+        return true;
+    }
+
+    /**
      * Determine whether the user can update the model.
      */
     public function update(User $user, DiningTable $diningTable): bool

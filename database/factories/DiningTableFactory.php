@@ -11,7 +11,6 @@ class DiningTableFactory extends Factory
     {
         return [
             'name' => fake()->lastName().' Household',
-            'invite_code' => strtoupper(Str::random(8)),
         ];
     }
 }

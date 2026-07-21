@@ -68,13 +68,13 @@ class DiningTableController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(DiningTableRequest $request, DiningTable $diningTable, DiningTableService $diningTableService): View
+    public function update(DiningTableRequest $request, DiningTable $diningTable, DiningTableService $diningTableService): RedirectResponse
     {
         $diningTableDTO = UpdateDiningTableDTO::fromRequest($request);
 
         $diningTable = $diningTableService->update($diningTable, $diningTableDTO);
 
-        return view('dining-tables.show', compact('diningTable'));
+        return redirect()->route('dining-tables.show', [$diningTable]);
     }
 
     /**
