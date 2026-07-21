@@ -16,10 +16,10 @@ final readonly class ResetPasswordDTO
     public static function fromRequest(ResetPasswordRequest $request): self
     {
         return new self(
-            email: $request->string('email'),
-            password: $request->string('password'),
-            password_confirmation: $request->string('password_confirmation'),
-            token: $request->string('token')
+            email: $request->string('email')->toString(),
+            password: $request->string('password')->toString(),
+            password_confirmation: $request->string('password_confirmation')->toString(),
+            token: $request->string('token')->toString(),
         );
     }
 

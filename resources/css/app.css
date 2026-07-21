@@ -46,6 +46,14 @@
         margin-bottom: calc(var(--spacing) * 2);
     }
 
+    h3 {
+        font-size: var(--text-lg);
+        font-weight: var(--font-weight-medium);
+        color: var(--color-parchment-950);
+        line-height: var(--leading-tight);
+        margin-bottom: calc(var(--spacing) * 2);
+    }
+
     p {
         font-size: var(--text-sm);
         color: var(--color-parchment-700);

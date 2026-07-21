@@ -9,9 +9,11 @@
 
     // 2. Specific styles for each variant
     $variants = [
-        'primary' => 'font-semibold bg-herb text-parchment-100 hover:bg-herb-600',
-        'outline' => 'font-medium border border-parchment-300 text-parchment-700 hover:text-parchment-950 hover:border-parchment-500',
-        'text'    => 'font-medium text-parchment-700 hover:text-parchment-950'
+        'primary'   => 'font-semibold bg-herb text-parchment-100 hover:bg-herb-600',
+        'secondary' => 'font-medium border border-slate-300 bg-slate-50 border border-slate-500 text-slate-500 hover:bg-transparent  transition-colors;',
+        'danger'    => 'font-medium border border-red-300 bg-red-50 border border-red-500 text-red-500 hover:bg-transparent  transition-colors;',
+        'outline'   => 'font-medium border border-parchment-300 text-parchment-700 hover:text-parchment-950 hover:border-parchment-500',
+        'text'      => 'font-medium text-parchment-700 hover:text-parchment-950'
     ];
 
     // 3. Merge the base classes with the variant-specific classes

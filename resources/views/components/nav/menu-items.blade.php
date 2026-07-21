@@ -8,7 +8,7 @@
         <x-button variant="primary" href="{{ route('register') }}">Get started</x-button>
     @endif
 @else
-    <x-button variant="text" href="{{ route('dashboard') }}">Home</x-button>
+    <x-button variant="text" href="{{ route('dining-tables.index') }}">Home</x-button>
     <form method="POST" action="{{ route('logout') }}">
         @csrf
         <x-button type="submit" variant="outline">Log out</x-button>

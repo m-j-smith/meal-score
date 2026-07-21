@@ -1,4 +1,4 @@
-<a href="{{ route('dashboard') }}" class="flex items-center gap-2 no-underline shrink-0">
+<a href="{{ route('dining-tables.index') }}" class="flex items-center gap-2 no-underline shrink-0">
 
     <svg viewBox="0 0 48 48" fill="none" class="w-8 h-8 sm:w-10 sm:h-10" aria-hidden="true">
         <circle cx="24" cy="24.8" r="21.5" fill="rgba(0,0,0,0.08)" />

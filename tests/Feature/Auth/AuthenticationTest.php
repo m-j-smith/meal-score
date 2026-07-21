@@ -20,7 +20,7 @@ test('users can authenticate using the login screen', function () {
     ]);
 
     $this->assertAuthenticated();
-    $response->assertRedirect(route('dashboard'));
+    $response->assertRedirect(route('dining-tables.index'));
 });
 
 test('users can not authenticate with invalid password', function () {

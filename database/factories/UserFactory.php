@@ -44,9 +44,9 @@ class UserFactory extends Factory
     }
 
     /**
-     * A defined user - no email or password
+     * A guest user - no email or password
      */
-    public function defined(): static
+    public function guest(): static
     {
         return $this->state(fn (array $attributes) => [
             'email' => null,

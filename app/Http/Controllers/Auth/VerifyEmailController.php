@@ -18,11 +18,11 @@ class VerifyEmailController extends Controller
         $user = $request->user();
 
         if ($user->hasVerifiedEmail()) {
-            return redirect()->intended(route('dashboard'))->with('info', 'Your email address is already verified.');
+            return redirect()->intended(route('dining-tables.index'))->with('info', 'Your email address is already verified.');
         }
 
         $request->fulfill();
 
-        return redirect()->route('dashboard')->with('success', 'Your email address has been verified.');
+        return redirect()->route('dining-tables.index')->with('success', 'Your email address has been verified.');
     }
 }

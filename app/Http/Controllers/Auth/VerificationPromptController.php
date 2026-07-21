@@ -18,6 +18,6 @@ class VerificationPromptController extends Controller
         /** @var User $user */
         $user = $request->user();
 
-        return $user->hasVerifiedEmail() ? redirect()->intended(route('dashboard')) : view('auth.verify-email');
+        return $user->hasVerifiedEmail() ? redirect()->intended(route('dining-tables.index')) : view('auth.verify-email');
     }
 }

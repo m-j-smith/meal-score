@@ -18,7 +18,7 @@ class VerificationNotificationController extends Controller
         $user = $request->user();
 
         if ($user->hasVerifiedEmail()) {
-            return redirect()->intended(route('dashboard'));
+            return redirect()->intended(route('dining-tables.index'));
         }
 
         $user->sendEmailVerificationNotification();

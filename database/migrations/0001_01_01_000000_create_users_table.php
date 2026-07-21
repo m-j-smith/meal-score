@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique()->nullable(); // Nullable for defined (non-registered) users
+            $table->string('email')->unique()->nullable(); // Nullable for guest (non-registered) users
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password')->nullable(); // Nullable for defined (non-registered) users
+            $table->string('password')->nullable(); // Nullable for guest (non-registered) users
             $table->rememberToken();
             $table->timestamps();
         });
