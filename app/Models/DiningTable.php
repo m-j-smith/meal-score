@@ -52,6 +52,7 @@ class DiningTable extends Model
     {
         return $this->users()->where('users.id', $user->id)->exists();
     }
+    // #endregion
 
     // =========================================================================
     // #region Helpers
